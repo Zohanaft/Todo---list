@@ -1,0 +1,46 @@
+
+.btn {
+  color: white;
+  background-color: gray;
+  height: 50px;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: rgb(104, 104, 104);
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  &:active {
+    background-color: lightgray;
+  }
+
+  &-radius {
+    @extend .btn;
+    border-radius: 10px;
+  }
+
+  &-rounded {
+    @extend .btn;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+
+  &-group-rounded {
+    @extend .btn;
+
+    &:first-child {
+      padding-left: 18px;
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+    }
+    &:last-child {
+      padding-right: 18px;
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+  }
+}
